@@ -16,10 +16,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Show 404 error but not redirect to index on accessing not existing product [PR-871](https://github.com/OXID-eSales/oxideshop_ce/pull/871)
 - Switched to default PDO result set types when using PHP8.1
 - System requirements:
-  - PHP must have access to a secure source of randomness [See more](https://www.php.net/manual/en/function.random-bytes.php). 
+- PHP must have access to a secure source of randomness [See more](https://www.php.net/manual/en/function.random-bytes.php). 
 - Respond with 404 error code on controller or method miss [PR-715](https://github.com/OXID-eSales/oxideshop_ce/pull/715)
 - Change type of default value for iIndex parameter in ``OxidProfessionalServices\Bergspezl\Model\Article::getZoomPictureUrl`` [PR-893](https://github.com/OXID-eSales/oxideshop_ce/pull/893)
 - Switched to templating-engine agnostic names in Controller templates (e.g. `Controller::$_sThisTemplate = 'page/content'` instead of `'page/content.tpl'`)
+- Don't store module settings in database
 
 ### Fixed
 - Ensure \OxidEsales\EshopCommunity\Application\Model\NewsSubscribed::getOptInStatus int result type
@@ -46,6 +47,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - `OxidEsales\EshopCommunity\Core\Module\ModuleCache`
   - `OxidEsales\EshopCommunity\Core\Module\ModuleInstaller`
   - `Internal\Framework\Templating\Resolver\LegacyTemplateNameResolver`
+  - `OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\Bridge\ModuleSettingBridge`
+  - `OxidEsales\EshopCommunity\Internal\Framework\Module\Setting\SettingDao`
+  - `OxidEsales\EshopCommunity\Internal\Framework\Module\Setting\SettingDaoBridge`
+  - `OxidEsales\EshopCommunity\Internal\Framework\Module\Setup\Handler\SettingModuleSettingHandler`
 - Methods:
   - `Application\Model\User::getUtilsObjectInstance()`
   - `Internal\Framework\Templating\TemplateEngineInterface::getDefaultFileExtension()`
@@ -96,6 +101,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - `oxid_esales.module.setup.version_module_setting_handler`
   - `oxid_esales.module.setup.shop_configuration_class_extension_handler`
   - `oxid_esales.module.setup.events_module_setting_handler`
+  - `OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\Bridge\ModuleSettingBridgeInterface`
+  - `OxidEsales\EshopCommunity\Internal\Framework\Module\Setting\SettingDaoInterface`
+  - `OxidEsales\EshopCommunity\Internal\Framework\Module\Setting\SettingDaoBridgeInterface`
+  - `oxid_esales.module.setup.shop_module_setting_module_setting_handler`
 - Config options:
   - `aModuleExtensions`
   - `aModuleVersions`
@@ -114,6 +123,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - `MODULE_KEY_TEMPLATES`
     - `MODULE_KEY_EXTENSIONS`
     - `MODULE_KEY_CONTROLLERS`
+
 
 ## [7.0.0-rc.1] - 2021-07-07
 

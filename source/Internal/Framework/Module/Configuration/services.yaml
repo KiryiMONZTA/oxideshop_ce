@@ -13,10 +13,6 @@ services:
     class: OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\Bridge\ShopConfigurationDaoBridge
     public: true
 
-  OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\Bridge\ModuleSettingBridgeInterface:
-    class: OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\Bridge\ModuleSettingBridge
-    public: true
-
   OxidEsales\EshopCommunity\Internal\Framework\Module\Configuration\Dao\ShopEnvironmentMisconfigurationEventSubscriber:
     tags:
       - { name: kernel.event_subscriber }
