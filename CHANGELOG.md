@@ -123,6 +123,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - `MODULE_KEY_TEMPLATES`
     - `MODULE_KEY_EXTENSIONS`
     - `MODULE_KEY_CONTROLLERS`
+  - `OxidEsales\EshopCommunity\Core\Config::OXMODULE_MODULE_PREFIX`
 
 
 ## [7.0.0-rc.1] - 2021-07-07
