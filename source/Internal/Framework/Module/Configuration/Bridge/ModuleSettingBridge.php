@@ -15,6 +15,9 @@ use OxidEsales\EshopCommunity\Internal\Framework\Module\Setting\SettingDaoInterf
 use OxidEsales\EshopCommunity\Internal\Transition\Utility\ContextInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
+/**
+ * @deprecated will be removed in v7.0, we won't store module settings in the database.
+ */
 class ModuleSettingBridge implements ModuleSettingBridgeInterface
 {
     /**
